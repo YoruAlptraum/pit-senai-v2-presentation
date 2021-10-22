@@ -1,0 +1,15 @@
+area{
+    cursor: pointer;
+}
+h1,h2{
+    text-align: center;
+}
+h1{
+    font-size: 60px;
+}
+section{
+    padding-top:25px;
+}
+section a{
+    color:#023E8A;
+}

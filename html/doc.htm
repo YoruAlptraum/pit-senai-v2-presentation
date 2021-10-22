@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>PIT SENAI - Documentação</title>
+        <link rel = "stylesheet" href = "/css/mainstyle.css">
+        <link rel = "stylesheet" href = "/css/doc.css">
+        <link rel="icon" href="/Resources/Main Icon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/f55b7695fe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="/html/main.htm"><i class="fas fa-home" title="Home"></i></a></li>
+                    <li><a href = "/html/doc.htm">Documentação</a></li>
+                    <li><a href="/html/sobre.htm">Sobre</a></li>
+                    <li><a href="/html/links.htm">Links</a></li>
+                </ul>
+            </nav>
+            <nav class="side-nav">
+                <ul>
+                    <li><a href="#intro">Introdução</a></li>
+                    <hr>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#acessos"><strong>Acessos</strong></a></li>
+                    <li><a href="#gerencia">Gerencia</a></li>
+                    <li><a href="#estoque">Estoque</a></li>
+                    <li><a href="#caixa">Caixa</a></li>
+                    <li><a href="#vendedor">Vendedor</a></li>
+                    <hr>
+                    <li><a href="#banco">Banco de dados</a></li>
+                    <hr>
+                    <li><a href="#servidor">Servidor</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <div id="content">
+                <section id="intro">
+                    <h2>Introdução</h2>
+                    <p>O projeto aqui documentado foi desenvolvido em C# Windows Forms ao longo de aproximadamente 3 (três) meses.</p>
+                </section>
+                <section id ="login">
+                    <h2>Login</h2>
+                    <figure>
+                        <img src="/resources/login.png" alt = "login img" class = "img img-slim">
+                        <figcaption>Figura - Tela de login</figcaption>
+                    </figure>
+                    <p>A tela de login é a primeira tela que dará boas-vindas ao usuário.</p>
+                    <p>O login é feito com o uso do id do funcionário juntamente com a senha correspondente.</p>
+                    <p>O id do funcionário é gerado automaticamente com o cadastro do funcionário e a senha é criada pelo funcionário com acesso tipo gerente no momento do cadastro.</p>
+                    <p>A senha fica armazenada no banco de dados com a função hash md5.</p>
+                </section>
+                <section id ="acessos">
+                    <h2>Acessos</h2>
+                    <p>Os funcionarios são separados em 4(quatro) tipos de acessos, sendo eles:</p>
+                    <ul>
+                        <li><a href="#gerencia">Gerência</a></li>
+                        <li><a href="#estoque">Estoque</a></li>
+                        <li><a href="#caixa">Caixa</a></li>
+                        <li><a href="#vendedor">Vendedor</a></li>
+                    </ul>
+                    <p>Em sequência cada tipo de acesso será explicado em maiores detalhes.</p>
+                    <p>Também sendo possível navegar para um tópico desejado ao clicar em um dos links na lista acima.</p>
+                    <p>Todos os acessos possuem um botão <q>sair</q> no canto superior esquerdo que permite retornar a tela de login.</p>
+                    <figure>
+                        <img src = "/Resources/botao-sair.PNG" alt = "img botão sair" class = "img-slim">
+                        <figcaption>Figura - botão sair</figcaption>
+                    </figure>
+                </section>
+                <section id ="gerencia">
+                    <h2>Gerência</h2>
+                    <p>O acesso de tipo gerência é o acesso de nível mais alto e tem como principal característica <em>gerenciar</em> desde funcionarios e clientes a produtos e fornecedores.</p>
+                    <p>Outra característica do acesso gerência é a possibilidade de visualizar entradas <q>removidas</q> com a utilização da tecla de atalho <em>F2</em> (tecla função 2), as entradas removidas são aquelas que tiveram seu status alterado de ativas para inativas no banco de dados, o que as isola do funcionamento restante do sistema.</p>
+                    <p><em>Clique nos submenus da imagem abaixo para visualizar um exemplo de seus dados.</em></p>
+                    <figure>
+                        <img src="/resources/Gerencia.PNG" usemap="#gerencia-image-map" class = "img" id="img-Gerencia">
+                        <figcaption>Figura - Menu gerência</figcaption>
+                    </figure>
+                    <h3>SubMenus:</h3>
+                    <p>Os submenus do acesso gerência possuem um atributo <em>Status</em> que como poderá ser observado nas figuras fica desabilitado e com o valor travado como ativo durante o cadastro de um novo item, isso ocorre pois o status <em>inativo</em> só é utilizado para itens que não se deseje remover do funcionamento normal do sistema.</p>
+                    <ul>
+                        <li>
+                            <p><strong>Menus:</strong> Fecha o submenu atualmente aberto.</p>
+                        </li>
+                        <li>
+                            <p><strong>Funcionários:</strong> Mostra uma lista de funcionários, sendo possível adicionar, remover e atualizar entradas.</p>
+                            <figure>
+                                <img src="/Resources/Gerencia_addfuncionarios.PNG" alt="img adicionar funcionário" class="img img-medium">
+                                <figcaption>Figura - formulário para adicionar e atualizar funcionarios.</figcaption>
+                            </figure>
+                        </li> 
+                        <li>         
+                        <p><strong>Fornecedores:</strong> Mostra uma lista de fornecedores, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <figure>
+                            <img src = "/Resources/Gerencia_addfornecedores.png" alt= "img adicionar fornecedor" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar e atualizar fornecedores.</figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                        <p><strong>Clientes:</strong> Mostra uma lista de clientes, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p>Para o cliente é possível adicionar múltiplos tipos de contatos para acompanhar a rápida mudança de meios de comunicação usados informalmente.</p>
+                        <p>A adição de contatos é feita ao informar primeiramente o tipo do contato (ex: telefone, celular ou e-mail ) e então o contato em si.</p>
+                        <figure>
+                            <img src ="/Resources/Gerencia_addclientes.png" alt = " img adicionar cliente" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar e atualizar clientes</figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                        <p><strong>Produtos:</strong> Mostra uma lista de produtos, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <figure>
+                            <img src ="/Resources/Gerencia_addprodutos.png" alt = " img adicionar produto" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar e atualizar produtos.</figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                        <p><strong>Devoluções:</strong> Mostra uma lista de notas, sendo possível adicionar (somente quando o caixa está aberto, pela nota emitida ser constada junto ao movimento geral do caixa) e remover entradas, não sendo possivel no entanto atualizar notas ja emitidas.</p>
+                        <p>Para criar uma nota é necessário primeiramente escolher o tipo de movimento. No caso do tipo de movimento ser <q>Recebimento</q> será necessário informar o id da ordem referente a venda. No caso de <q>Estornos</q> de débito e crédito será necessário informar o id do movimento do caixa referente. Nos demais, a caixa de texto que seria usada para informar o id permanece desabilitada.</p>
+                        <p>A caixa de diálogo para criação de notas também possui uma caixa numérica para informar o valor pago pelo cliente, sendo usado normalmente no caso de pagamento em dinheiro para calcular o troco (este valor informado não é salvo no banco de dados e serve apenas ao propósito de facilitar o cálculo do troco).</p>
+                        <p>A principal função desse menu é a possibilidade de realizar devoluções ao desativar uma nota.</p>
+                        <figure>
+                            <img src ="/Resources/caixa_nota.png" alt = " img adicionar nota" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar notas.</figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                        <p><strong>Categorias:</strong> Mostra uma lista de categorias de produtos, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <figure>
+                            <img src ="/Resources/Gerencia_addcategorias.PNG" alt = " img adicionar categoria" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar e atualizar categorias.</figcaption>
+                        </figure>
+                        </li>
+                        <li>
+                        <p><strong>Formas de pagamento:</strong> Mostra uma lista de formas de pagamento, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <figure>
+                            <img src ="/Resources/Gerencia_addformasdepagamento.png" alt = " img adicionar forma de pagamento" class = "img img-medium">
+                            <figcaption>Figura - formulário para adicionar e atualizar formas de pagamento.</figcaption>
+                        </figure>
+                        </li>
+                    </ul>
+                </body>
+                </section>
+                <section id ="estoque">
+                    <h2>Estoque</h2>
+                    <p>O acesso de tipo estoque é responsável por registrar a entrada e a saída de produtos do estoque.</p>
+                    <p>A <strong>entrada</strong> de produtos é registrada informando o <em>ID</em> e a quantidade do produto que está sendo recebido pelo estoque.</p>
+                    <p>Para a identificação do <em>ID</em> do produto desejado o estoquista tem acesso a visualização do catálogo de produtos assim como a lista de fornecedores registrados.</p>
+                    <p>A <strong>saida</strong> de produtos é registrada selecionando os itens que estão sendo retirados do estoque e dando a eles sua data de saída(data atual do registro).</p>
+                    <p>É possível selecionar multiplos itens ao clicar e arrastar itens em série que se dese selecionar, ou, alternativamente ao clicar enquanto segurando o botão "Alt" do teclado para selecionar múltiplos itens separados.</p>
+                    <p>Não é possível no entanto registrar a saída de um item que ja tenha a mesma registrada.</p>
+                    <p><em>Clique nos submenus da imagem abaixo para visualizar um exemplo de seus dados.</em></p>
+                    <figure>
+                        <img src="/resources/estoque_produtos.PNG" usemap="#estoque-image-map" class="img" id = "img-Estoque">
+                        <figcaption>Figura - Menu estoque</figcaption>
+                    </figure>
+                </section>
+                <section id ="caixa">
+                    <h2>Caixa</h2>
+                    <p>O acesso tipo caixa tem como responsabilidades abrir e fechar o caixa (limitado a uma vez ao dia), realizar o cadastro  e a atualização do cadastro de clientes e registrar movimentos monetários do caixa como notas, pagamentos e sangrias.</p>
+                    <p><em>Os submenus: cadastrar, historico e fechar caixa abrem seus subformulários no painel a direita, demais submenus abrem caixas de dialogo.</em></p>
+                    <figure>
+                        <img src="/resources/caixa.PNG" usemap="#caixa-image-map" class="img" id="img-caixa">
+                        <figcaption>Figura - Menu caixa</figcaption>
+                    </figure>
+                    <h3>SubMenus:</h3>
+                    <ul>
+                        <li>
+                            <p><strong>Menus:</strong> Fecha o submenu atualmente aberto.</p>
+                        </li>
+                        <li id="caixa-nota">
+                            <p><strong>Nota:</strong> O formulário utiilzado pelo caixa é o mesmo utilizado pelo acesso gerência no submenu de devoluções, com a exceção de não possuir a altoridade para alterar os estatus da nota.</p>
+                            <p>Para criar uma nota é necessário primeiramente escolher o tipo de movimento. No caso do tipo de movimento ser <q>Recebimento</q> será necessário informar o id da ordem referente a venda. No caso de <q>Estornos</q> de débito e crédito será necessário informar o id do movimento do caixa referente. Nos demais, a caixa de texto que seria usada para informar o id permanece desabilitada.</p>
+                            <p>A caixa de diálogo para criação de notas também possui uma caixa numérica para informar o valor pago pelo cliente, sendo usado normalmente no caso de pagamento em dinheiro para calcular o troco (este valor informado não é salvo no banco de dados e serve apenas ao propósito de facilitar o cálculo do troco).</p>
+                            <figure>
+                                <img src ="/Resources/caixa_nota.png" alt = " img adicionar nota" class = "img img-medium">
+                                <figcaption>Figura - formulário para adicionar notas.</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p><strong>Cadastrar:</strong> Realiza o cadastro de clientes. Utiliza do mesmo subformulário que o cadastro de clientes do submenu de clientes do acesso gerência.</p>
+                        </li>
+                        <li id = "caixa-atualizarcadastro">
+                            <p><strong>Atualizar Cadastro:</strong> É possivel atualizar o cadastro de um cliente ao informar seu id de cliente o que abrirá o subformulário para informar as alterações.</p>
+                            <figure>
+                                <img src = "/Resources/caixa_atualizarcadastro.PNG" alt = "img atualizar cadastro de clientes" class = "img-medium">
+                                <figcaption>Figura - caixa de diálogo para informar o id do cliente que deseje atualizar.</figcaption>
+                            </figure>
+                        </li>
+                        <li id = "caixa-pesquisarid">
+                            <p><strong>Pesquisar ID:</strong> É possivel pesquisar o ID de um cliente cadastrado ao informar o seu documento.</p>
+                            <figure>
+                                <img src = "/resources/caixa_pesquisarid.PNG" alt = "img pesquisar id" class = "img-medium">
+                                <figcaption>Figura - caixa de diálogo para pesquisar o id</figcaption>
+                            </figure>                            
+                        </li>
+                        <li>
+                            <p><strong>Histórico:</strong> Possibilita a visualização dos históricos de notas, movimentos do caixa e de fechamentos do caixa.</p>
+                        </li>
+                        <li id = "caixa-abrircaixa">
+                            <p><strong>Abrir Caixa:</strong> Realiza a abertura do caixa.</p>
+                            <figure>
+                                <img src = "/Resources/caixa_abrircaixa.PNG" alt = "img abrir caixa" class = "img-medium">
+                                <figcaption>Figura - caixa de dialogo para informar o saldo inicial do dia.</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <p><strong>Fechar Caixa:</strong> Realiza o fechamento do caixa. Sendo possível a visualização do total de capital movimentado no dia, separado por tipo de movimento, além de informar o total contado no final do dia para comparação de erros.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section id ="vendedor">
+                    <h2>Vendedor</h2>
+                    <p>O papel do acesso vendedor é gerar ordens de vendas que depois deverão ser emitidas como notas pelo caixa.</p>
+                    <p>Para adicionar itens á lista de itens da ordem é necessário primeiramente gerar uma nova ordem, sendo possivel (mas não necessário) informar o cliente que está fazendo o pedido ao informar o documento do cliente e pesquisar sua existência no banco de dados de clientes já cadastrados.</p>
+                    <p>Tanto o cliente quanto a observação da ordem podem ser informados antes ou depois da criação de uma nova ordem, que tem seus dados atualizados ao criar uma nova ordem e ao imprimir os dados da mesma.</p>
+                    <p>No caso de um fechamento repentido do sistema, a última ordem fechada antes de ser encerrada é retomada.</p>
+                    <figure>
+                        <img src="/resources/vendedor.PNG" usemap="#vendedor-image-map" class="img" id="img-vendedor">
+                        <figcaption>Figura - Menu vendedor</figcaption>
+                    </figure>
+                    <h3>Funções:</h3>
+                    <ul>
+                        <li id = "imprimir">
+                            <h4>Imprimir:</h4>
+                            <p>A função de imprimir atualiza a ordem de venda atual e permite a impressão do id da ordem juntamente ao total a ser pago. Tal ordem deverá ser então levada pelo cliente para o caixa para realizar o pagamento.</p>
+                            <figure>
+                                <img src = "/Resources/vendedor_imprimir.PNG" class = "img" alt = "img impressão">
+                                <figcaption>Figura - Prévia de impressão da ordem.</figcaption>
+                            </figure>
+                        </li>
+                        <li id = "descartar">
+                            <h4>Descartar:</h4>
+                            <p>Esta função descarta a ordem atual, apagando a do sistema e devolvendo os produtos que estavam nela de volta ao sistema de estoque.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section id ="banco">
+                    <h2>Banco de dados</h2>
+                    <p>O banco de dados utilizado neste projeto é o MySQL.</p>
+                    <p><em>Abaixo segue o diagrama geral do banco de dados utilizado pelo projeto.</em></p>
+                    <figure>
+                        <img class = "img" src = "/Resources/diagrama-banco.png">
+                        <figcaption>Figura - diagrama do banco de dados do projeto gerado automaticamente pelo MySQL.</figcaption>
+                    </figure>
+                </section>
+                <section id ="servidor">
+                    <h2>Servidor</h2>
+                    <p>Para que o sistema tenha o efeito esperado na empresa alvo, faz-se necessário o atendimento aos seguintes requerimentos:</p>
+                    <p>Uma topologia simples de redes de computadores, com as máquinas conectadas a um switch e posteriormente ao servidor do banco de dados da aplicação.</p>
+                    <figure>
+                        <img src = "/resources/servidor.PNG" alt = "img servidor" class = "img-medium">
+                        <figcaption>Figura - exemplo de topologia de servidor.</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </div>                   
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="gerencia-image-map">
+            <area alt="Menus" title="Menus" coords="647,47,1,96" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia.png'">
+            <area alt="Funcionarios" title="Funcionarios" coords="3,95,647,146" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_funcionarios.png'">
+            <area alt="Fornecedores" title="Fornecedores" coords="3,145,646,196" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_fornecedores.png'">
+            <area alt="Clientes" title="Clientes" coords="3,197,646,246" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_clientes.png'">
+            <area alt="Produtos" title="Produtos" coords="1,248,646,299" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_produtos.png'">
+            <area alt="Devoluções" title="Devoluções" coords="1,299,646,348" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_devolucoes.png'">
+            <area alt="Categorias" title="Categorias" coords="1,348,647,397" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_categorias.png'">
+            <area alt="Formas de Pagamento" title="Formas de Pagamento" coords="1,397,646,463" shape="rect" 
+                onclick=" document.getElementById('img-Gerencia').src='/resources/gerencia_formasdepagamento.png'">
+            <area alt="Sair" title="Sair" coords="1,20,50,48" shape="rect" 
+                href = "#login">
+        </map>
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="estoque-image-map">
+            <area alt="produtos" title="produtos" coords="959,51,1080,89" shape="rect"
+                onclick = "document.getElementById('img-Estoque').src='/resources/estoque_produtos.png'">
+            <area alt="fornecedores" title="fornecedores" coords="1082,51,1248,88" shape="rect"
+                onclick = "document.getElementById('img-Estoque').src='/resources/estoque_fornecedores.png'">
+            <area alt="saida" title="saida" coords="476,998,6,1038" shape="rect"
+                href = "#estoque">
+            <area alt="entrada" title="entrada" coords="479,999,959,1038" shape="rect"
+                href = "#estoque">
+            <area alt="sair" title="sair" coords="49,46,5,26" shape="rect" 
+                href="#login">
+        </map>
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="caixa-image-map">
+            <area alt="menus" title="menus" coords="-1,48,646,97" shape="rect"
+                onclick = "document.getElementById('img-caixa').src='/resources/caixa.png'">
+            <area alt="notas" title="notas" coords="1,94,646,147" shape="rect"
+                href = "#caixa-nota">
+            <area alt="cadastrar" title="cadastrar" coords="3,147,646,195" shape="rect"
+                onclick = "document.getElementById('img-caixa').src='/resources/caixa_cadastrar.png'">
+            <area alt="atualizar" title="atualizar" coords="647,245,1,198" shape="rect"
+                href = "#caixa-atualizarcadastro">
+            <area alt="pesquisarid" title="pesquisarid" coords="1,245,647,300" shape="rect"
+                href = "#caixa-pesquisarid">
+            <area alt="historico" title="historico" coords="1,300,647,347" shape="rect"
+                onclick = "document.getElementById('img-caixa').src='/resources/caixa_historico.png'">
+            <area alt="fecharcaixa" title="fecharcaixa" coords="-1,398,646,466" shape="rect"
+                onclick = "document.getElementById('img-caixa').src='/resources/caixa_fecharcaixa.png'">
+            <area alt="sair" title="sair" coords="1,24,49,46" shape="rect"
+                href = "#login">
+        </map>
+        <!-- Image Map Generated by http://www.image-map.net/ -->
+        <map name="vendedor-image-map">
+            <area alt="imprimir" title="imprimir" coords="1,1001,958,1038" shape="rect"
+                href = "#imprimir">
+            <area alt="descartar" title="descartar" coords="959,1001,1918,1038" shape="rect"
+                href = "#descartar">
+            <area alt="sair" title="sair" coords="1,26,50,46" shape="rect"
+                href = "#login">
+        </map>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/jquery.rwdImageMaps.js"></script>
+        <script>
+            $(document).ready(function(e) {
+                $('img[usemap]').rwdImageMaps();
+            });
+        </script>
+    </body>
+</html>
