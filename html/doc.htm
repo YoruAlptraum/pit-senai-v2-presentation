@@ -60,12 +60,16 @@
                         <li><a href="#caixa">Caixa</a></li>
                         <li><a href="#vendedor">Vendedor</a></li>
                     </ul>
-                    <p>Em sequência cada tipo de acesso será explicado em maiores detalhes.</p>
-                    <p>Também sendo possível navegar para um tópico desejado ao clicar em um dos links na lista acima.</p>
+                    <p>Em sequência cada tipo de acesso será explicado em maiores detalhes, também sendo possível navegar para um tópico desejado ao clicar em um dos links na lista acima.</p>
                     <p>Todos os acessos possuem um botão <q>sair</q> no canto superior esquerdo que permite retornar a tela de login.</p>
                     <figure>
                         <img src = "/Resources/botao-sair.png" alt = "img botão sair" class = "img-slim">
                         <figcaption>Figura - botão sair</figcaption>
+                    </figure>
+                    <p>Todos os acessos que possuem uma barra de pesquisa possuem também uma <em>tooltip</em>, ou <q>dica de ferramenta</q>, presente no botão de pesquisa com a imagem de lupa, que informará ao usuário pelo que será pesquisado.</p>
+                    <figure>
+                        <img src = "/Resources/tooltip.png" alt = "img tooltip" class = "img">
+                        <figcaption>Figura - tooltip</figcaption>
                     </figure>
                 </section>
                 <section id ="gerencia">
@@ -84,21 +88,21 @@
                             <p><strong>Menus:</strong> Fecha o submenu atualmente aberto.</p>
                         </li>
                         <li>
-                            <p><strong>Funcionários:</strong> Mostra uma lista de funcionários, sendo possível adicionar, remover e atualizar entradas.</p>
+                            <p><strong>Funcionários:</strong> Mostra uma lista de funcionários, sendo possível adicionar, remover e atualizar entradas e pesquisar funcionários por nome.</p>
                             <figure>
                                 <img src="/Resources/Gerencia_addfuncionarios.png" alt="img adicionar funcionário" class="img img-medium">
                                 <figcaption>Figura - formulário para adicionar e atualizar funcionarios.</figcaption>
                             </figure>
                         </li> 
                         <li>         
-                        <p><strong>Fornecedores:</strong> Mostra uma lista de fornecedores, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p><strong>Fornecedores:</strong> Mostra uma lista de fornecedores, sendo possível adicionar, remover e atualizar entradas e pesquisar fornecedores por nome ou descrição.</p>
                         <figure>
                             <img src = "/Resources/Gerencia_addfornecedores.png" alt= "img adicionar fornecedor" class = "img img-medium">
                             <figcaption>Figura - formulário para adicionar e atualizar fornecedores.</figcaption>
                         </figure>
                         </li>
                         <li>
-                        <p><strong>Clientes:</strong> Mostra uma lista de clientes, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p><strong>Clientes:</strong> Mostra uma lista de clientes, sendo possível adicionar, remover e atualizar entradas e pesquisar clientes por nome.</p>
                         <p>Para o cliente é possível adicionar múltiplos tipos de contatos para acompanhar a rápida mudança de meios de comunicação usados informalmente.</p>
                         <p>A adição de contatos é feita ao informar primeiramente o tipo do contato (ex: telefone, celular ou e-mail ) e então o contato em si.</p>
                         <figure>
@@ -107,14 +111,14 @@
                         </figure>
                         </li>
                         <li>
-                        <p><strong>Produtos:</strong> Mostra uma lista de produtos, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p><strong>Produtos:</strong> Mostra uma lista de produtos, sendo possível adicionar, remover e atualizar entradas e pesquisar produtos por nome.</p>
                         <figure>
                             <img src ="/Resources/Gerencia_addprodutos.png" alt = " img adicionar produto" class = "img img-medium">
                             <figcaption>Figura - formulário para adicionar e atualizar produtos.</figcaption>
                         </figure>
                         </li>
                         <li>
-                        <p><strong>Devoluções:</strong> Mostra uma lista de notas, sendo possível adicionar (somente quando o caixa está aberto, pela nota emitida ser constada junto ao movimento geral do caixa) e remover entradas, não sendo possivel no entanto atualizar notas ja emitidas.</p>
+                        <p><strong>Devoluções:</strong> Mostra uma lista de notas, sendo possível adicionar (somente quando o caixa está aberto, pela nota emitida ser constada junto ao movimento geral do caixa) e remover entradas, não sendo possivel no entanto atualizar notas ja emitidas. É possível pesquisar notas por data de emissão ou id.</p>
                         <p>Para criar uma nota é necessário primeiramente escolher o tipo de movimento. No caso do tipo de movimento ser <q>Recebimento</q> será necessário informar o id da ordem referente a venda. No caso de <q>Estornos</q> de débito e crédito será necessário informar o id do movimento do caixa referente. Nos demais, a caixa de texto que seria usada para informar o id permanece desabilitada.</p>
                         <p>A caixa de diálogo para criação de notas também possui uma caixa numérica para informar o valor pago pelo cliente, sendo usado normalmente no caso de pagamento em dinheiro para calcular o troco (este valor informado não é salvo no banco de dados e serve apenas ao propósito de facilitar o cálculo do troco).</p>
                         <p>A principal função desse menu é a possibilidade de realizar devoluções ao desativar uma nota.</p>
@@ -124,14 +128,14 @@
                         </figure>
                         </li>
                         <li>
-                        <p><strong>Categorias:</strong> Mostra uma lista de categorias de produtos, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p><strong>Categorias:</strong> Mostra uma lista de categorias de produtos, sendo possível adicionar, remover e atualizar entradas e pesquisar categorias por nome.</p>
                         <figure>
                             <img src ="/Resources/Gerencia_addcategorias.png" alt = " img adicionar categoria" class = "img img-medium">
                             <figcaption>Figura - formulário para adicionar e atualizar categorias.</figcaption>
                         </figure>
                         </li>
                         <li>
-                        <p><strong>Formas de pagamento:</strong> Mostra uma lista de formas de pagamento, sendo possível adicionar, remover e atualizar entradas.</p>
+                        <p><strong>Formas de pagamento:</strong> Mostra uma lista de formas de pagamento, sendo possível adicionar, remover e atualizar entradas e pesquisar formas de pagamento por nome.</p>
                         <figure>
                             <img src ="/Resources/Gerencia_addformasdepagamento.png" alt = " img adicionar forma de pagamento" class = "img img-medium">
                             <figcaption>Figura - formulário para adicionar e atualizar formas de pagamento.</figcaption>
@@ -148,6 +152,7 @@
                     <p>A <strong>saida</strong> de produtos é registrada selecionando os itens que estão sendo retirados do estoque e dando a eles sua data de saída(data atual do registro).</p>
                     <p>É possível selecionar multiplos itens ao clicar e arrastar itens em série que se dese selecionar, ou, alternativamente ao clicar enquanto segurando o botão "Alt" do teclado para selecionar múltiplos itens separados.</p>
                     <p>Não é possível no entanto registrar a saída de um item que ja tenha a mesma registrada.</p>
+                    <p>É possível pesquisar o estoque por nome ou id do produto, id do estoque ou por data de entrada ou saída, e os produtos e fornecedores por nome ou id.</p>
                     <p><em>Clique nos submenus da imagem abaixo para visualizar um exemplo de seus dados.</em></p>
                     <figure>
                         <img src="/Resources/estoque_produtos.png" usemap="#estoque-image-map" class="img" id = "img-Estoque">
@@ -194,7 +199,8 @@
                             </figure>                            
                         </li>
                         <li>
-                            <p><strong>Histórico:</strong> Possibilita a visualização dos históricos de notas, movimentos do caixa e de fechamentos do caixa.</p>
+                            <p><strong>Histórico:</strong> Possibilita a visualização dos históricos dos movimentos do caixa, de notas,  e de fechamentos do caixa.</p>
+                            <p>É possível pesquisar movimentos do caixa por observação, id ou data do movimento, notas por data de emissão e fechamentos por data do fechamento, funcionario responsável por abertura ou fechamento ou por observação.</p>
                         </li>
                         <li id = "caixa-abrircaixa">
                             <p><strong>Abrir Caixa:</strong> Realiza a abertura do caixa.</p>
