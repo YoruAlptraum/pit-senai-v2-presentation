@@ -7,9 +7,16 @@
         <link rel = "stylesheet" href = "/css/main.css">
         <link rel ="icon" href="/Resources/Main Icon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/f55b7695fe.js" crossorigin="anonymous"></script>
+        <script>
+            function mudaQuadro(q,img,txt){
+                document.getElementById(q).style = "font-size:  200px";                
+            }
+            function mudaQuadroB(q,img,txt){
+                document.getElementById(q).style = "font-size:0px";
+            }
+        </script>
     </head>
     <body>
-        <header>
             <nav class="top-nav">
                 <ul>
                     <li><a href = "/html/main.htm"><i class="fas fa-home" title="Home"></i></a></li>
@@ -18,24 +25,27 @@
                     <li><a href = "/html/links.htm">Links</a></li>
                 </ul>
             </nav>
-        </header>
-        <div id="wrapper">
-            <div id ="content">
-                <section>
-                    <h1>Projeto de Inovação Tecnológica<br> SENAI</h1>
-                    <h2><em>Por Thiago Ozawa e Renato de Castro</em></h2>
-                </section>
-                <section>
-                    <p>Trabalho feito para a conclusão do curso Técnico de Informática com previsão de encerramento no final de 2021, pelos alunos Thiago Ozawa e Renato de Castro da Turma 24 do SENAI de Londrina.</p>
-                </section>
-                <section>
-                    <p>Este site tem como objetivo introduzir e documentar o projeto feito para o Projeto de Inovação Tecnológica (PIT) SENAI com entrega prevista para o final de 2021.</p>
-                    <p>Para ir para a página com a documentação. <a href = "/html/doc.htm"><strong>Clique aqui.</strong></a></p>
-                    <p>Para ir para a página com um breve <q>sobre</q> de nosso PIT. <a href = "/html/sobre.htm"><strong>Clique aqui.</strong></a> </p>
-                    <p>Para ir para a página com nossos links de contato e recursos utilizados. <a href = "/html/links.htm"><strong>Clique aqui.</strong></a></p>
-                    <p>Ou, alternativamente é possivel ir para essas mesmas páginas ao clicar em seus respectivos textos na barra de navegação, sempre presente no canto superior da página, sendo possível retornar a este menu a qualquer momento ao clicar no botão em forma de casa da mesma.</p>
-                </section>
+        <header>
+            <div class = "opc"></div>
+            <div class = "header">
+                <h1>Projeto de Inovação Tecnológica<br> PIT SENAI</h1>
+                <hr id = "header-hr">
+                <h2><em>Por Thiago Ozawa e Renato de Castro</em></h2>
             </div>
+        </header>
+        
+        <div id ="content">
+            <section>
+                <h3>Este site tem como objetivo documentar e introduzir o projeto feito para o Projeto de Inovação Tecnológica (PIT) SENAI com entrega prevista para o final de 2021.</h3>
+                <p>Trabalho feito para a conclusão do curso Técnico de Informática, pelos alunos Thiago Ozawa e Renato de Castro da Turma 24 do SENAI de Londrina.</p>
+            </section>
+            <section>
+                <h3>Para começar a navegar pelo site clique em um dos botões abaixo.</h3>
+                <p>Para ir para a página com a documentação. <a href = "/html/doc.htm"><strong>Clique aqui.</strong></a></p>
+                <p>Para ir para a página com um breve <q>sobre</q> de nosso PIT. <a href = "/html/sobre.htm"><strong>Clique aqui.</strong></a> </p>
+                <p>Para ir para a página com nossos links de contato e recursos utilizados. <a href = "/html/links.htm"><strong>Clique aqui.</strong></a></p>
+                <p>Alternativamente também é possivel ir para essas mesmas páginas ao clicar em seus respectivos textos na barra de navegação, sempre presente no canto superior da página, sendo possível retornar a este menu a qualquer momento ao clicar no botão em forma de casa da mesma.</p>
+            </section>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="/js/jquery.rwdImageMaps.js"></script>
