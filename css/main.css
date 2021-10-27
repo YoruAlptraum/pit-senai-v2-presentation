@@ -2,14 +2,56 @@ area{
     cursor: pointer;
 }
 h1,h2{
-    text-align: center;
+    text-align: left;
+    color:#ebfcff;
 }
 h1{
     font-size: 60px;
 }
 section{
-    padding-top:25px;
+    margin-top:30px;
 }
 section a{
     color:#023E8A;
+}
+header{
+    background-image:url("/Resources/tec.jpg");
+    background-size:cover;
+    display:block;
+    height: 100vh;
+    position: relative;
+}
+.header{
+    top:50%;
+    padding-left:0%;
+    box-sizing: inherit;
+    position:relative;
+}
+#opc{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0);
+}
+.icone{
+    font-size: 100px;
+}
+.quadros{
+    display:block;
+    float:left;
+}
+.div-quadros{
+    justify-content: space-evenly;
+    display:flex;
+    text-align: center;
+}
+#header-hr{
+    max-width: 50%;
+}
+#content{
+    padding-top: 0px;
+}
+@keyframes fadein{
+    0% {opacity: 0%;}
+    100% {opacity: 100%}
 }

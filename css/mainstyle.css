@@ -21,10 +21,6 @@ section{
     background: #fdffff;
     border-bottom:#03045E solid 2px;
 }
-header{
-    width:100%;
-    position:fixed;
-}
 h2{
     margin:0px 15px 15px 0px;
 }
@@ -53,6 +49,8 @@ p{
     font-size: 130%;
     display:fixed;
     z-index: 2;
+    box-sizing: content-box;
+    position:fixed;
 }
 .top-nav ul li{
     display: inline-block;
