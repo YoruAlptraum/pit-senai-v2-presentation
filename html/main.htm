@@ -8,15 +8,15 @@
         <link rel ="icon" href="/Resources/Main Icon.ico" type="image/x-icon">
         <script src="https://kit.fontawesome.com/f55b7695fe.js" crossorigin="anonymous"></script>
         <script>
-            function mudaQuadro(q,img,txt){
-                document.getElementById(q).style = "font-size:  200px";                
-            }
-            function mudaQuadroB(q,img,txt){
-                document.getElementById(q).style = "font-size:0px";
+            function headerTextAnim(){
+                document.getElementById('header-text').style = 
+                'padding-left:5%; transition: padding 4s; animation-name: fadein; animation-duration: 4s;';
+                document.getElementById('opc').style = 
+                'background: rgba(0,0,0,0.7); transition: background 4s;';
             }
         </script>
     </head>
-    <body>
+    <body onload = "headerTextAnim()">
             <nav class="top-nav">
                 <ul>
                     <li><a href = "/html/main.htm"><i class="fas fa-home" title="Home"></i></a></li>
@@ -26,11 +26,14 @@
                 </ul>
             </nav>
         <header>
-            <div class = "opc"></div>
-            <div class = "header">
-                <h1>Projeto de Inovação Tecnológica<br> PIT SENAI</h1>
-                <hr id = "header-hr">
-                <h2><em>Por Thiago Ozawa e Renato de Castro</em></h2>
+            <div id = "opc">
+                <div class = "header" >
+                    <div id = "header-text">
+                        <h1>Projeto de Inovação Tecnológica<br> PIT SENAI</h1>
+                        <hr id = "header-hr">
+                        <h2><em>Por Thiago Ozawa e Renato de Castro</em></h2>
+                    </div>
+                </div>
             </div>
         </header>
         
@@ -47,12 +50,5 @@
                 <p>Alternativamente também é possivel ir para essas mesmas páginas ao clicar em seus respectivos textos na barra de navegação, sempre presente no canto superior da página, sendo possível retornar a este menu a qualquer momento ao clicar no botão em forma de casa da mesma.</p>
             </section>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="/js/jquery.rwdImageMaps.js"></script>
-        <script>
-            $(document).ready(function(e) {
-                $('img[usemap]').rwdImageMaps();
-            });
-        </script>
     </body>
 </html>
